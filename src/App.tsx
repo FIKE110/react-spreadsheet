@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState , useRef } from "react"
+import './styles/table.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+type tableMatrixType = {
+  row:number,
+  column:number
 }
 
-export default App
+export function App(){
+  const [tableMatrix,setTableMatrix] = useState({row:0,column:0})
+  const rowRef = useRef(HTMLInputElement)
+  const columnRef = useRef(HTMLInputElement)
+  
+  return (
+    <div>
+      <div>
+        <input type="number" ref={rowRef}/>
+        <input type='number' ref={columnRef} />
+        <button onClick={
+          ()=>setTableMatrix({row:parseInt(rowRef.current.value),column:parseInt(columnRef.current.value),})}>
+          Click me</button>
+        <div>
+          <table>
+            {tableMatrix.row>0 ? <th>S/N</th> : null}
+            
+            {Array.from({length:tableMatrix.row},(_,index)=>(
+              <tr>
+                <td style={{padding:'10px'}}>{index+1}</td>
+                 {Array.from({length:tableMatrix.column},(index) => ( 
+                <td><input style={{outline:'none',border:'none',padding:'10px',width:'70px'}} type='text'/></td>
+              ))}
+              </tr>
+            ))}
+          </table>
+        </div>
+      </div>
+    </div>
+  )
+}
