@@ -1,0 +1,16 @@
+.warning-panel {
+    background-color: #ffe4e1; /* Light red background color */
+    border: 1px solid #d9534f; /* Border color */
+    color: #d9534f; /* Text color */
+    padding: 15px; /* Padding for content */
+    margin: auto; /* Margin to provide space around the warning panel */
+    border-radius: 4px; /* Border radius for rounded corners */
+    width:70%;
+    margin-top:70px;
+  }
+  
+  .warning-message {
+    font-weight: bold; /* Make the warning message bold */
+    padding: 20px;
+  }
+  
