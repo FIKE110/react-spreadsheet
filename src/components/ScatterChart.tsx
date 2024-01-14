@@ -2,6 +2,21 @@ import React from 'react';
 import { Scatter } from 'react-chartjs-2';
 
 const ScatterChart = () => {
+
+  function plotPoints(data1,data2){
+    let data=[]
+    if(data1.length==data2.length){
+      for(let i=0;i<data1.length;i++){
+        if(!isNaN(data1[i]) && !isNaN(data2[i])){
+          data.push({x:data1[i],y:data2[i]})
+        }
+        else{
+          return []
+        }
+      }
+    }
+    return data
+  }
   // Sample data for the scatter plot
   const data = {
     datasets: [
