@@ -1,14 +1,17 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import SpreadSheetRoute from "./components/SpreadSheetRoute";
 import ChartsRoute from "./components/ChartsRoute";
-import PieChart from "./components/PieChart";
+import NotFoundPage from "./components/NotFoundPage";
+import HomePage from "./components/HomePage";
 
 export function App(){
   return(
     <BrowserRouter>
       <Routes>
-        <Route path='/spreadsheet' element={<SpreadSheetRoute />} />
-        <Route path='/charts' element={<ChartsRoute />} />
+        <Route path="/" Component={HomePage} />
+        <Route path='/spreadsheet' Component={SpreadSheetRoute} />
+        <Route path='/charts' Component={ChartsRoute} />
+        <Route path='*' Component={NotFoundPage}/>
       </Routes>
     </BrowserRouter>
   )

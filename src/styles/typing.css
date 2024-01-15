@@ -1,0 +1,30 @@
+.typing-container {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+  }
+  
+  .typing-text {
+    display: inline-block;
+    position: relative;
+    color:white
+  }
+  
+  .typing-cursor {
+    position: absolute;
+    bottom: 0.1em;
+    width: 0.4em;
+    height: 1.1em;
+    background-color: white;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  

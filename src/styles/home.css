@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#home-div{
+    background: linear-gradient(to bottom right, #16689e 0%, #9b59b6 100%);
+    width:100%;
+    height:1000px 
+}
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .key-features {
+    margin-top: 20px;
+  }
+  
