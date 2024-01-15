@@ -8,6 +8,8 @@ import PolarAreaChart from './PolarAreaChart';
 import RadarChart from './RadarChart';
 import ScatterChart from './ScatterChart';
 import BarChart from './BarChart';
+import ChartsTitle from './ChartsTitle';
+import MathOperation from './MathsOperation';
 
 export default function ChartsRoute(){
     const location=useLocation()
@@ -15,17 +17,18 @@ export default function ChartsRoute(){
     const nameOfTable=location.state.tableName
     return(
         <div>
-            <div>
+            <div style={{backgroundColor:'#f4f4f4',paddingBottom:5}}>
                 <div>
-                    <h1>Charts for table {nameOfTable}</h1>
+                   <ChartsTitle />
                 </div>
-                <BarChart data={data} name={nameOfTable}/>
-                <PieChart data={data} name={nameOfTable} />
-                <DonutChart data={data} name={nameOfTable} />
-                <LineChart data={data} name={nameOfTable} />
-                <PolarAreaChart data={data} name={nameOfTable}/>
-                <RadarChart data={data} name={nameOfTable}/>
-                <ScatterChart data={data} anem={nameOfTable}/>
+                <BarChart data={data} name={nameOfTable} chartname='Bar Chart'/>
+                <PieChart data={data} name={nameOfTable} chartname='Pie Chart'/>
+                <DonutChart data={data} name={nameOfTable} chartname='Donut Chart'/>
+                <LineChart data={data} name={nameOfTable} chartname='Line Graph' />
+                <PolarAreaChart data={data} name={nameOfTable} chartname='PolarArea Chart'/>
+                <RadarChart data={data} name={nameOfTable} chartname='Radar Chart'/>
+                <ScatterChart data={data} name={nameOfTable} chartname='Scatter Graph'/>
+                <MathOperation data={data} chartname='Maths Operations'/>
             </div>
         </div>
     )

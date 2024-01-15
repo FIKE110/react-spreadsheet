@@ -56,6 +56,7 @@ const RadarChart = (props) => {
 const styles={
   buttonContainer:{
     backgroundColor: '#4caf50',
+    display:'flex',
     color: 'white',
     padding: 10,
     border: 0,

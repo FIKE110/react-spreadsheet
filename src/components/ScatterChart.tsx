@@ -38,7 +38,7 @@ const ScatterChart = (props) => {
         borderColor: 'rgba(75,192,192,1)',
         pointBackgroundColor:color,
         pointBorderColor: '#fff',
-        pointRadius:4,
+        pointRadius:5,
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(75,192,192,1)',
       },
