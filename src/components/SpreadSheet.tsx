@@ -52,7 +52,7 @@ const useCharts=()=>{
   const nameOfTable=prompt("what is the name of Table")
   if(nameOfTable  && dataIsNotNull(tableData.current)){
     console.log(tableData.current)
-    navigate('/charts',{state:{data:tableData.current}})
+    navigate('/charts',{state:{data:tableData.current,tableName:nameOfTable}})
   }
   else{
     setTableMatrix({row:-1,column:-1})

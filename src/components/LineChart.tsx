@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import { Line } from 'react-chartjs-2';
 import DropdownMenu from './DropDownMenu';
+import { genRandomColor } from '../Global';
 
 
 const LineChart = (props) => {
@@ -11,15 +12,16 @@ const LineChart = (props) => {
   const [dataLabel,setDataLabel] = useState(defaultLabel)
   const [mainData,setMainData] = useState( [65, 59, 80, 81, 56])
 
+  const color=genRandomColor()
   const data = {
     labels:dataLabel,
     datasets: [
       {
-        label: 'Sample Line Chart',
+        label: props.name ,
         data:mainData,
         fill: fill,
-        borderColor: '#4CAF50',
-        backgroundColor: '#4CAF50',
+        borderColor: color,
+        backgroundColor: color,
       },
     ],
   };
@@ -30,6 +32,9 @@ const LineChart = (props) => {
 
   return (
     <div className='overlay-div'>
+      <div>
+        <p className='chart-title'>{props.chartname}</p>
+      </div>
       <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
       <DropdownMenu current='Label...' setPieData={null} 
       setLabel={setDataLabel} mainData={props.data} options={props.data[0]}/>
@@ -62,7 +67,7 @@ const styles={
   ,
 
   button:{
-    backgroundColor: '#4caf50',
+    backgroundColor: 'transparent',
     color: 'white',
     padding: 10,
     border: 0,

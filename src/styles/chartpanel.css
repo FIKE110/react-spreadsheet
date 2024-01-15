@@ -7,3 +7,8 @@
     margin: auto;
     margin-bottom: 100px;
   }
+
+  .chart-title{
+    font-size: 23px;
+    font-weight: bold;
+  }
