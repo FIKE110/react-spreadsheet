@@ -15,9 +15,9 @@ const [tableMatrix,setTableMatrix] = useState({row:2,column:2})
 const tableData = useRef(gen2DArray(tableMatrix.row+1,tableMatrix.column))
 const [warningMes,setWarningMes] =useState('Use only positive non-zero numbers')
 const [scrollLeft,setScrollLeft]=useState(true)
-const rowRef = useRef(HTMLInputElement)
-const columnRef = useRef(HTMLInputElement)
-const tableRef = useRef<any>()
+const rowRef = useRef(null)
+const columnRef = useRef<any>(null)
+const tableRef = useRef<any>(null)
 
 const addRow =()=>{
   const newTableMatrix={...tableMatrix,row:tableMatrix.row+1};
@@ -147,6 +147,7 @@ useEffect(()=>{
                {Array.from({length:tableMatrix.column},(_,id) => ( 
               <td  key={id} style={{height:'50px'}}><InputComponent cord={{x:index+1,y:id,data:null}} 
               storeData={storeData} 
+              placeholder='null'
               /></td>
             ))}
             </tr>

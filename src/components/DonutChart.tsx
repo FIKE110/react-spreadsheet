@@ -16,7 +16,7 @@ const DonutChart = (props) => {
   const [mainPieData,setMainPieData] = useState( [300, 50, 100])
   const pieData=()=>{
   let data = {
-      labels: select ? dataLabel:defaultLabel,
+      labels: dataLabel,
       datasets: [{
         label: props.name,
         data: mainPieData,

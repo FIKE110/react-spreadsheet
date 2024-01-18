@@ -9,7 +9,7 @@ export default function InputComponent({cord,storeData,placeholder}){
   }, [])
   
    return(
-    <input ref={input} className='cellinput' placeholder={placeholder? placeholder:'null'} style={{paddingLeft: '19px'}}
+    <input ref={input} className='cellinput' placeholder={placeholder} style={{paddingLeft: '19px'}}
               onChange={(e)=>{
                 cord.data=e.target.value
                 storeData(cord)
