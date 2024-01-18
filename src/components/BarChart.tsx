@@ -4,6 +4,7 @@ import DropdownMenu from './DropDownMenu';
 
 import { Bar } from 'react-chartjs-2';
 import { genRandomColor } from '../Global';
+import { ReactPropTypes } from 'react';
 
 const BarChart = (props) => {
   const defaultLabel= [
@@ -11,8 +12,7 @@ const BarChart = (props) => {
     'Blue',
     'Yellow'
   ];
-  const [select,setSelect] = useState(true)
-  const [dataLabel,setDataLabel] = useState(defaultLabel)
+  const [dataLabel,setDataLabel] = useState<string[]>(defaultLabel)
   const [mainPieData,setMainPieData] = useState( [300, 50, 100])
 
   const color=genRandomColor(0.3,true)

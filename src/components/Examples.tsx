@@ -8,7 +8,9 @@ export default function Examples(props){
             </div> 
             <div style={{textAlign:'center',marginTop:15}}>
                 <h2 style={{fontSize:18}}>{props.heading}</h2>
-                <p style={{padding:2,paddingTop:8,textAlign:'center'}}>{props.paragraph}</p>
+                <div style={{width:'90%',margin:10,textAlign:'center'}}>
+                <p>{props.paragraph}</p>
+                </div>
             </div>
         </div>
     )
