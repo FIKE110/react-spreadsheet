@@ -7,7 +7,6 @@ import { genRandomColor } from '../Global';
 const LineChart = (props) => {
   const defaultLabel= ['January', 'February', 'March', 'April', 'May'];
 
-  const [select,setSelect] = useState(true)
   const [fill,setFill] = useState(false)
   const [dataLabel,setDataLabel] = useState(defaultLabel)
   const [mainData,setMainData] = useState( [65, 59, 80, 81, 56])

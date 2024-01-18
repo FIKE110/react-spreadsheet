@@ -7,7 +7,7 @@ import { genMultipleRandomColors } from '../Global';
 const PolarAreaChart = (props) => {
   const defaultLabel= ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5']
 
-  const [select,setSelect] = useState(true)
+
   const [dataLabel,setDataLabel] = useState(defaultLabel)
   const [mainPieData,setMainPieData] = useState([10, 20, 30, 40, 50])
   // Sample data for the polar area chart

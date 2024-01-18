@@ -1,6 +1,6 @@
 import { Pie } from "react-chartjs-2";
 import DropdownMenu from "./DropDownMenu";
-import { useState ,useContext} from "react";
+import { useState } from "react";
 import {genMultipleRandomColors} from "../Global";
 
 export default function PieChart(props){
@@ -10,12 +10,12 @@ export default function PieChart(props){
     'Blue',
     'Yellow'
   ];
-  const [select,setSelect] = useState(true)
+
   const [dataLabel,setDataLabel] = useState(defaultLabel)
   const [mainPieData,setMainPieData] = useState( [300, 50, 100])
   const pieData=()=>{
   let data = {
-      labels: select ? dataLabel:defaultLabel,
+      labels: dataLabel,
       datasets: [{
         label: props.name,
         data: mainPieData,

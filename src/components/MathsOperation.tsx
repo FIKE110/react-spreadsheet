@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as math from 'mathjs';
 import DropdownMenu from './DropDownMenu';
 
@@ -74,7 +74,6 @@ const MathsOperation = (props) => {
 };
 
 const containerStyle = {
-  textAlign: 'center',
   padding: '20px',
 };
 

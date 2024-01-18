@@ -12,7 +12,6 @@ const DonutChart = (props) => {
     'Blue',
     'Yellow'
   ];
-  const [select,setSelect] = useState(true)
   const [dataLabel,setDataLabel] = useState( defaultLabel)
   const [mainPieData,setMainPieData] = useState( [300, 50, 100])
   const pieData=()=>{

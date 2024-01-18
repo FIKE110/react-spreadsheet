@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+
 import '../styles/dropdown.css'; // Import the stylesheet
 
 const DropdownMenu = ({current,options,setLabel,mainData,setPieData}) => {
   const [selectedOption, setSelectedOption] = useState(-1);
 
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
 
   const getDataFromColumn=(id)=>{
     let data:any[]=[]

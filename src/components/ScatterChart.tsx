@@ -4,9 +4,7 @@ import { Scatter } from 'react-chartjs-2';
 import { genRandomColor } from '../Global';
 
 const ScatterChart = (props) => {
-  const defaultLabel=  ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'];
 
-  const [fill,setFill] = useState(false)
   const [data1,setData1] = useState([10,20,30,40,50])
   const [data2,setData2] = useState( [20,10,20,40,23])
 
@@ -45,20 +43,7 @@ const ScatterChart = (props) => {
     ],
   };
 
-  const options = {
-    // Customize your chart options here
-    scales: {
-      x: {
-        type: 'linear',
-        position: 'bottom',
-      },
-      y: {
-        type: 'linear',
-        position: 'left',
-      },
-    },
-  };
-
+ 
   useEffect(()=>{
     console.log(data1)
   })

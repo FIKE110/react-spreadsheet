@@ -3,7 +3,6 @@ import plusIcon from '../assets/plus.png'
 import { useEffect,useState ,useRef} from "react"
 import '../styles/table.css'
 import { useNavigate } from "react-router-dom"
-import ModalComponent from "./ModalComponent"
 import InputComponent from "./InputComponent"
 
 
@@ -11,10 +10,6 @@ export function SpreadSheet(){
 
 const navigate=useNavigate()
 
-type tableMatrixType = {
-    row:number,
-    column:number
-} 
 
 const [tableMatrix,setTableMatrix] = useState({row:2,column:2})
 const tableData = useRef(gen2DArray(tableMatrix.row+1,tableMatrix.column))
@@ -22,7 +17,7 @@ const [warningMes,setWarningMes] =useState('Use only positive non-zero numbers')
 const [scrollLeft,setScrollLeft]=useState(true)
 const rowRef = useRef(HTMLInputElement)
 const columnRef = useRef(HTMLInputElement)
-const tableRef = useRef<HTMLTableElement>()
+const tableRef = useRef<any>()
 
 const addRow =()=>{
   const newTableMatrix={...tableMatrix,row:tableMatrix.row+1};
