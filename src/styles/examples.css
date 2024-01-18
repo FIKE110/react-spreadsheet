@@ -1,0 +1,9 @@
+.main{
+    width:200px;
+    height:230px;
+    background: white;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    border-radius:20px;
+    position:relative;
+    top:-50px;
+}

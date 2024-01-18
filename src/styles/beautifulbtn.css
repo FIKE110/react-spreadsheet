@@ -1,0 +1,16 @@
+.button-started:hover{
+    color: white;
+    background-color:#2ecc71;
+  }
+  
+  .button-started{
+    margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #2ecc71;
+        background: white ;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer
+  }

@@ -4,7 +4,7 @@ import '../styles/typing.css';
 const TypingAnimation = () => {
   const [text, setText] = useState('');
   const [cursorPosition, setCursorPosition] = useState(0);
-  const textToType = 'Welcome to Typing Animation!';
+  const textToType = 'Welcome to Glimpse into Data Insights!';
 
   useEffect(() => {
     let index = 0;
@@ -31,7 +31,7 @@ const TypingAnimation = () => {
     <div className="typing-container">
       <div className="typing-text">
         {text}
-        <span className="typing-cursor" style={{ left: `calc(${cursorPosition}ch - 0.2em)` }}></span>
+        <span className="typing-cursor" style={{ left: `calc(${cursorPosition})` }}></span>
       </div>
     </div>
   );

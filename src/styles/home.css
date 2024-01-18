@@ -4,9 +4,30 @@
 }
 
 #home-div{
-    background: linear-gradient(to bottom right, #16689e 0%, #9b59b6 100%);
+    background: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+#first-half{
+  background: linear-gradient(to right, #93E9BE, #98F5E1);
     width:100%;
-    height:1000px 
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    height: 70%;
+}
+
+#second-half{
+  background: white;
+    width:100%;
+    height: 22%;
+}
+
+#example-holder{
+  width: 100%;
+  height: 0px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .home-container {
@@ -19,5 +40,12 @@
   
   .key-features {
     margin-top: 20px;
+  }
+
+  #heading{
+    color:white;
+    font-size:54px;
+    margin-left: 60px;
+    padding-top: 20px;
   }
   
