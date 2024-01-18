@@ -1,24 +1,8 @@
 
 const ChartsTitle = () => {
 
-  const containerStyle = {
-    textAlign: 'center',
-    padding: '20px',
-    backgroundColor: '#f4f4f4',
-  };
-
-  const titleStyle = {
-    fontSize: '2em',
-    color: '#333',
-  };
-
-  const descriptionStyle = {
-    fontSize: '1.2em',
-    color: '#555',
-  };
-
   return (
-    <div style={containerStyle} >
+    <div style={containerStyle.style} >
       <h1 style={titleStyle}>
         Transforming Table Data into Visual Insights
       </h1>
@@ -32,5 +16,22 @@ const ChartsTitle = () => {
     </div>
   )
 }
+
+const containerStyle = {
+  style:{
+  textAlign: 'center',
+  padding: '20px',
+  backgroundColor: '#f4f4f4',}
+};
+
+const titleStyle = {
+  fontSize: '2em',
+  color: '#333',
+};
+
+const descriptionStyle = {
+  fontSize: '1.2em',
+  color: '#555',
+};
 
 export default ChartsTitle;

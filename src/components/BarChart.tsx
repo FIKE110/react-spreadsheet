@@ -4,7 +4,6 @@ import DropdownMenu from './DropDownMenu';
 
 import { Bar } from 'react-chartjs-2';
 import { genRandomColor } from '../Global';
-import { ReactPropTypes } from 'react';
 
 const BarChart = (props) => {
   const defaultLabel= [
