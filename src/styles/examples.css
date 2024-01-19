@@ -13,3 +13,16 @@
 .main:hover{
     scale: 1.18;
 }
+
+@media screen and (max-width:767px) {
+    .main{
+        width: 80%;
+        top:0px;
+        padding: 30px 0;
+        margin: 20px 0;
+    }
+
+    .main:hover{
+        scale: 1.0;
+    }
+}

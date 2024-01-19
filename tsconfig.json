@@ -7,7 +7,6 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "outDir": "./build",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

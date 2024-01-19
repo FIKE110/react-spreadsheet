@@ -16,20 +16,18 @@ const HomePage = () => {
       <div id='first-half'>
         <div>
           <h1 id='heading'>Glimplse</h1>
-          <div style={{marginLeft:60,paddingTop:27,display:'flex'}}>
-            <div style={{flex:3,fontSize:20}}>
+          <div id="intro-container">
+            <div id='descript-container'>
             <TypingAnimation />
-            <p style={{fontSize:20,fontWeight:500,
-              padding:0,color:'white',width:'70%',marginTop:14,textAlign:'justify'}}>
+            <p id="descript-text">
         Unlock the potential of your data with this innovative platform. Effortlessly transform tables into
         vibrant charts and graphs, gaining valuable insights at a glance. Perform statistical operations such
         as mean, median, and variance with ease, taking your data analysis to the next level at a glance.
          </p>
          <Link to='/spreadsheet'><BeautifulButton /></Link>
             </div>
-            <div style={{flex:2,paddingRight:20}}>
-              <img src={homechart} style={{width:'100%',height:'100%',position:'relative',top:-30,
-              borderRadius:20}}/>
+            <div id='image-container'>
+              <img src={homechart} id='image'/>
             </div>
           </div>
         </div>
