@@ -14,7 +14,7 @@
     width:100%;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
-    height: 80%;
+    padding-bottom: 50px;
 }
 
 #second-half{
@@ -86,6 +86,7 @@
 
 #image-container{
   flex:2;
+  margin: 20px;
   margin-bottom: 25px;
 }
 
@@ -94,7 +95,7 @@
   font-size:20px
 }
 
-@media screen and (max-width:767px){
+@media (max-width:1024px){
 
   *{
     margin: 0;
@@ -132,12 +133,13 @@
 
   #image{
     top:0px;
-    border-radius: 0px;
+    border-radius: 10px;
   }
 
   #image-container{
+    margin: 0%;
     margin-top: 30px;
-    padding-right: 0px;
+    padding: 20px;
     background-color: aliceblue;
   }
 
@@ -152,6 +154,7 @@
 
   #first-half{
     height: auto;
+    padding-bottom: 0px;
   }
 
   #second-half{

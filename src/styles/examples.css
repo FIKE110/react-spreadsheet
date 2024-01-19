@@ -7,14 +7,14 @@
     position:relative;
     scale: 1;
     transition: scale 500ms normal;
-    top:-50px;
+    top:-70px;
 }
 
 .main:hover{
     scale: 1.18;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:1024px) {
     .main{
         width: 80%;
         top:0px;
