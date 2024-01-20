@@ -46,6 +46,8 @@ const MathsOperation = (props) => {
     return result
   };
 
+  calculateOperations()
+
   return (
     <div style={containerStyle} className='overlay-div'>
       <div style={{textAlign:'left'}}>

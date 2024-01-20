@@ -28,10 +28,6 @@ const LineChart = (props) => {
   
 
 
-  const options = {
-    // Customize your chart options here
-  };
-
   return (
     <div className='overlay-div'>
       <div>
@@ -48,36 +44,9 @@ const LineChart = (props) => {
         <button className='fill-button'>Fill</button>
         <input type='checkbox' onChange={()=>setFill(!fill)}/>
       </div>
-      <Line data={data} options={options} />
+      <Line data={data} />
     </div>
   );
 };
-
-const styles={
-  buttonContainer:{
-    backgroundColor: '#4caf50',
-    color: 'white',
-    padding: 10,
-    border: 0,
-    margin: 8,
-    width:80,
-    borderRadius: 4,
-    cursor: 'pointer',
-    fontSize: 16,
-  }
-
-  ,
-
-  button:{
-    backgroundColor: 'transparent',
-    color: 'white',
-    padding: 10,
-    border: 0,
-    margin: 2,
-    borderRadius: 4,
-    cursor: 'pointer',
-    fontSize: 16,
-  }
-}
 
 export default LineChart;
