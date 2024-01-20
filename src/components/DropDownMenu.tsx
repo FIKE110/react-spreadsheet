@@ -30,7 +30,7 @@ const DropdownMenu = ({current,options,setLabel,mainData,setPieData}) => {
         <option value="">{current}</option>
         {
             options.map((item,index:number)=>(
-                <option value={index} 
+                <option key={index} value={index} 
                 >{item.data}</option>
             ))
         }
@@ -46,7 +46,7 @@ const DropdownMenu = ({current,options,setLabel,mainData,setPieData}) => {
         <option value="">{current}</option>
         {
             options.map((item,index:number)=>(
-                <option value={index} 
+                <option key={index} value={index} 
                 >{item.data}</option>
             ))
         }

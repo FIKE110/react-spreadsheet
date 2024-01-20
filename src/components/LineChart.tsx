@@ -25,6 +25,9 @@ const LineChart = (props) => {
     ],
   };
 
+  
+
+
   const options = {
     // Customize your chart options here
   };
@@ -41,8 +44,8 @@ const LineChart = (props) => {
         <DropdownMenu current='Data...' setPieData={setMainData} 
         setLabel={null} mainData={props.data} options={props.data[0]}/>
       </div>
-      <div style={styles.buttonContainer}>
-        <button style={styles.button}>Fill</button>
+      <div className='button-container'>
+        <button className='fill-button'>Fill</button>
         <input type='checkbox' onChange={()=>setFill(!fill)}/>
       </div>
       <Line data={data} options={options} />

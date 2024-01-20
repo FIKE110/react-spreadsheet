@@ -23,4 +23,10 @@
     font-size: 16px;
     color: #27ae60;
   }
+
+  @media screen  and (max-width:767px) {
+    .dropdown-select{
+      padding: 4px;
+    }
+  }
   

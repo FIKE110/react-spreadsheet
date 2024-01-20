@@ -46,8 +46,6 @@ const MathsOperation = (props) => {
     return result
   };
 
-  console.log(calculateOperations())
-
   return (
     <div style={containerStyle} className='overlay-div'>
       <div style={{textAlign:'left'}}>
@@ -58,8 +56,8 @@ const MathsOperation = (props) => {
         </div>
 
       <div style={resultsContainerStyle}>
-        <p className='chart-title'>Results:</p>
-        <div style={{textAlign:'justify',paddingLeft:14}}>
+        <p className='chart-title' style={{fontSize:18,marginBottom:10}}>Results:</p>
+        <div id="maths-result-holder" style={{textAlign:'left',paddingLeft:14}}>
         <p>Sum : {result.sum != null? result.sum : 'Could not be Calculated'} </p>
         <p>Multiplication: {result.multiplication !=null? result.multiplication : 'Could not be Calculated'}</p>
         <p>Median : {result.median !=null ? result.median : 'Could not be Calculated'}</p>

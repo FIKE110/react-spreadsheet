@@ -1,10 +1,10 @@
 import '../styles/beautifulbtn.css'
 
-const BeautifulButton = () => {
+const BeautifulButton = (props) => {
 
   return (
     <button className='button-started' >
-      Get Started
+      {props.value ? props.value: 'Get Started'}
     </button>
   );
 };

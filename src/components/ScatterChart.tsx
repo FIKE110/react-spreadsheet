@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import DropdownMenu from './DropDownMenu';
 import { Scatter } from 'react-chartjs-2';
 import { genRandomColor } from '../Global';
@@ -44,10 +44,6 @@ const ScatterChart = (props) => {
   };
 
  
-  useEffect(()=>{
-    console.log(data1)
-  })
-
   return (
     <div className='overlay-div'>
       <div>

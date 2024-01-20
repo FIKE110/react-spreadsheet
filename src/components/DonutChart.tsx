@@ -25,10 +25,6 @@ const DonutChart = (props) => {
       }]
     };
 
-   /* const config = {
-      type: 'doughnut',
-      data: data,
-    };*/
 
     return data
   }

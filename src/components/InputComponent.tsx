@@ -1,13 +1,8 @@
-import {useRef,useEffect} from 'react'
+import {useRef} from 'react'
 export default function InputComponent({cord,storeData,placeholder}){
 
   const input=useRef(null)
 
-  useEffect(() => {
-    return () => {
-    }
-  }, [])
-  
    return(
     <input ref={input} className='cellinput' placeholder={placeholder} style={{paddingLeft: '19px'}}
               onChange={(e)=>{

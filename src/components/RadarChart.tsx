@@ -44,41 +44,13 @@ const RadarChart = (props) => {
         <DropdownMenu current='Data...' setPieData={setMainData} 
         setLabel={null} mainData={props.data} options={props.data[0]}/>
       </div>
-      <div style={styles.buttonContainer}>
-        <button style={styles.button}>Fill</button>
+      <div className='button-container'>
+        <button className='fill-button'>Fill</button>
         <input type='checkbox' onChange={()=>setFill(!fill)}/>
       </div>
       <Radar data={data} options={options} />
     </div>
   );
 };
-
-const styles={
-  buttonContainer:{
-    backgroundColor: '#4caf50',
-    display:'flex',
-    color: 'white',
-    padding: 10,
-    border: 0,
-    margin: 8,
-    width:80,
-    borderRadius: 4,
-    cursor: 'pointer',
-    fontSize: 16,
-  }
-
-  ,
-
-  button:{
-    backgroundColor: '#4caf50',
-    color: 'white',
-    padding: 10,
-    border: 0,
-    margin: 2,
-    borderRadius: 4,
-    cursor: 'pointer',
-    fontSize: 16,
-  }
-}
 
 export default RadarChart;

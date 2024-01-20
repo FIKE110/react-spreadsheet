@@ -6,10 +6,51 @@
     width:70%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 8%;
   }
 
   .chart-title{
     font-size: 23px;
     font-weight: bold;
+  }
+
+.button-container{
+  background-color: #4caf50;
+    display:flex;
+    color: white;
+    padding: 10px;
+    border: 0px;
+    margin: 8px;
+    width:80px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fill-button{
+  background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: 0px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+  @media screen and (max-width:767px){
+    #maths-result-holder{
+      font-size: small;
+    } 
+
+    .button-container{
+      padding: 0%;
+      padding-right: 20px;
+      width:50px;
+    }
+
+    .fill-button{
+      padding: 4;
+      width: 70%;
+    }
   }

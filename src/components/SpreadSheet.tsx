@@ -44,14 +44,18 @@ const addColumns =() =>{
 }
 
 const useCharts=()=>{
-  const nameOfTable=prompt("what is the name of Table")
+  let nameOfTable=prompt("what is the name of Table")
   if(nameOfTable  && dataIsNotNull(tableData.current)){
-    console.log(tableData.current)
+    nameOfTable=nameOfTable.trim()
     navigate('/charts',{state:{data:tableData.current,tableName:nameOfTable}})
   }
-  else{
+  else if(dataIsNotNull(tableData.current)){
     setTableMatrix({row:-1,column:-1})
     setWarningMes('Some Elements in Table Are null')
+  }
+  else{
+  setTableMatrix({row:-1,column:-1})
+    setWarningMes('Table name cannot be null')
   }
 }
 
@@ -74,7 +78,6 @@ function dataIsNotNull(tableData){
 
 const storeData=(data)=>{
   tableData.current[data.x][data.y]=data
-  console.log(tableData.current)
 }
 
 const genTableData=(arr,tableSize)=>{
@@ -91,12 +94,10 @@ const genTableData=(arr,tableSize)=>{
       }
     }
   }
-  console.log(data)
   return data
 }
 
 useEffect(()=>{
-  console.log(tableData)
     if(tableRef.current){
       if(!scrollLeft){
         tableRef.current.scrollTop=tableRef.current.scrollHeight
@@ -114,7 +115,6 @@ useEffect(()=>{
       <button className="submit-button" onClick={
         ()=>{
           const newTableMatrix={row:parseInt(rowRef.current.value),column:parseInt(columnRef.current.value)}
-         console.log(newTableMatrix)
           tableData.current=genTableData(tableData.current,{...newTableMatrix,row:newTableMatrix.row+1})
           setTableMatrix(newTableMatrix)
           setWarningMes('Use only positive non-zero numbers')
